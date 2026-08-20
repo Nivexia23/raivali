@@ -1,48 +1,32 @@
+# syntax=docker/dockerfile:1
+# Raivali panel — single-image Railway build (source is bundled, no network clone at build time)
 ARG PYTHON_VERSION=3.14
-
 FROM ghcr.io/astral-sh/uv:python$PYTHON_VERSION-bookworm-slim AS builder
-ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy
+ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy UV_PYTHON_DOWNLOADS=0
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc \
-    python3-dev \
-    libc6-dev \
+    gcc python3-dev libc6-dev git curl unzip \
     && rm -rf /var/lib/apt/lists/*
 
-ENV UV_PYTHON_DOWNLOADS=0
+RUN curl -fsSL https://bun.sh/install | bash
+ENV PATH="/root/.bun/bin:$PATH"
 
-WORKDIR /build
-RUN --mount=type=cache,target=/root/.cache/uv \
-    --mount=type=bind,source=uv.lock,target=uv.lock \
-    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    uv sync --frozen --no-install-project --no-dev
-ADD . /build
-RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-dev
+WORKDIR /code
+COPY . .
 
+# Build the dashboard static bundle (final image has no bun, so it must exist here)
+RUN cd dashboard && bun install --frozen-lockfile && cd .. && bash build_dashboard.sh
+
+RUN uv sync --frozen --no-dev
 
 FROM python:$PYTHON_VERSION-slim-bookworm
-
-COPY --from=builder /build /code
+COPY --from=builder /code /code
 WORKDIR /code
-
 ENV PATH="/code/.venv/bin:$PATH"
 
-# Install curl for health checks
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && chmod +x /code/start.sh /code/start-railway.sh
 
-COPY cli_wrapper.sh /usr/bin/pasarguard-cli
-RUN chmod +x /usr/bin/pasarguard-cli
-
-COPY tui_wrapper.sh /usr/bin/pasarguard-tui
-RUN chmod +x /usr/bin/pasarguard-tui
-
-# Copy healthcheck script
-COPY healthcheck.sh /code/healthcheck.sh
-RUN chmod +x /code/healthcheck.sh
-
-RUN chmod +x /code/start.sh
-
-ENTRYPOINT ["/code/start.sh"]
+EXPOSE 8000
+ENTRYPOINT ["/code/start-railway.sh"]
