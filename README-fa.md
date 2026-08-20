@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://github.com/PasarGuard/panel" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/Raivali/panel" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/PasarGuard-white-logo.png">
-      <img width="160" height="160" src="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/PasarGuard-black-logo.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/Raivali-white-logo.png">
+      <img width="160" height="160" src="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/Raivali-black-logo.png">
     </picture>
   </a>
 </p>
@@ -18,13 +18,13 @@
 <br/>
 <p align="center">
     <a href="#">
-        <img src="https://img.shields.io/github/actions/workflow/status/PasarGuard/panel/build.yml?style=flat-square" />
+        <img src="https://img.shields.io/github/actions/workflow/status/Raivali/panel/build.yml?style=flat-square" />
     </a>
-    <a href="https://hub.docker.com/r/PasarGuard/panel" target="_blank">
-        <img src="https://img.shields.io/docker/pulls/PasarGuard/panel?style=flat-square&logo=docker" />
+    <a href="https://hub.docker.com/r/Raivali/panel" target="_blank">
+        <img src="https://img.shields.io/docker/pulls/Raivali/panel?style=flat-square&logo=docker" />
     </a>
     <a href="#">
-        <img src="https://img.shields.io/github/license/PasarGuard/panel?style=flat-square" />
+        <img src="https://img.shields.io/github/license/Raivali/panel?style=flat-square" />
     </a>
     <a href="https://t.me/Pasar_Guard" target="_blank">
         <img src="https://img.shields.io/badge/telegram-group-blue?style=flat-square&logo=telegram" />
@@ -33,7 +33,7 @@
         <img src="https://img.shields.io/badge/twitter-commiunity-blue?style=flat-square&logo=twitter" />
     </a>
     <a href="#">
-        <img src="https://img.shields.io/github/stars/PasarGuard/panel?style=social" />
+        <img src="https://img.shields.io/github/stars/Raivali/panel?style=social" />
     </a>
 </p>
 
@@ -56,8 +56,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PasarGuard/panel" target="_blank" rel="noopener noreferrer" >
-    <img src="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/screenshot.png" alt="پاسارگارد اسکرین‌شات" width="600" height="auto">
+  <a href="https://github.com/Raivali/panel" target="_blank" rel="noopener noreferrer" >
+    <img src="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/screenshot.png" alt="پاسارگارد اسکرین‌شات" width="600" height="auto">
   </a>
 </p>
 
@@ -137,27 +137,27 @@
 
 **TimescaleDB (توصیه شده):**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database timescaledb
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database timescaledb
 ```
 
 **SQLite:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install
 ```
 
 **MySQL:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database mysql
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database mysql
 ```
 
 **MariaDB:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database mariadb
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database mariadb
 ```
 
 **PostgreSQL:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database postgresql
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database postgresql
 ```
 
 ### 📋 پس از نصب:
@@ -166,14 +166,14 @@ sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarg
 
 **📋 لاگ‌ها را مشاهده کنید** (برای توقف `Ctrl+C` را فشار دهید)
 
-**📁 فایل‌ها در مسیر** `/opt/pasarguard` قرار دارند
+**📁 فایل‌ها در مسیر** `/opt/raivali` قرار دارند
 
-**⚙️ فایل پیکربندی:** `/opt/pasarguard/.env` (برای جزئیات [پیکربندی](#-پیکربندی) را ببینید)
+**⚙️ فایل پیکربندی:** `/opt/raivali/.env` (برای جزئیات [پیکربندی](#-پیکربندی) را ببینید)
 
-**💾 فایل‌های داده:** `/var/lib/pasarguard`
+**💾 فایل‌های داده:** `/var/lib/raivali`
 
 **🔒 مهم:** داشبورد برای امنیت نیاز به گواهی SSL دارد
-- دریافت گواهی SSL: [راهنما](https://PasarGuard.github.io/PasarGuard/fa/examples/issue-ssl-certificate)
+- دریافت گواهی SSL: [راهنما](https://Raivali.github.io/Raivali/fa/examples/issue-ssl-certificate)
 - دسترسی: `https://YOUR_DOMAIN:8000/dashboard/`
 
 **🔗 برای تست بدون دامنه:** از SSH port forwarding استفاده کنید (پایین را ببینید)
@@ -194,12 +194,12 @@ ssh -L 8000:localhost:8000 user@serverip
 
 ```bash
 # ایجاد کلید موقت یک‌بارمصرف برای راه‌اندازی حساب owner
-pasarguard cli generate-temp-key
+raivali cli generate-temp-key
 
 # از این کلید در صفحه ورود داشبورد برای ایجاد حساب owner استفاده کنید
 
 # دریافت راهنما
-pasarguard --help
+raivali --help
 ```
 
 ---
@@ -210,15 +210,15 @@ pasarguard --help
 
 **📖 مستندات رسمی** - راهنماهای کامل در دسترس:
 
-🇺🇸 **[English](https://PasarGuard.github.io/PasarGuard)**
+🇺🇸 **[English](https://Raivali.github.io/Raivali)**
 
-🇮🇷 **[فارسی](https://PasarGuard.github.io/PasarGuard)**
+🇮🇷 **[فارسی](https://Raivali.github.io/Raivali)**
 
-🇷🇺 **[Русский](https://PasarGuard.github.io/PasarGuard)**
+🇷🇺 **[Русский](https://Raivali.github.io/Raivali)**
 
 </div>
 
-> **مشارکت:** در بهبود مستندات در [GitHub](https://github.com/PasarGuard/PasarGuard.github.io) کمک کنید
+> **مشارکت:** در بهبود مستندات در [GitHub](https://github.com/Raivali/Raivali.github.io) کمک کنید
 
 ---
 
@@ -230,7 +230,7 @@ pasarguard --help
 
 اگر پاسارگارد به شما کمک می‌کند، از توسعه آن حمایت کنید:
 
-[![Donate](https://img.shields.io/badge/Donate-Support%20Us-green?style=for-the-badge)](http://donate.pasarguard.org)
+[![Donate](https://img.shields.io/badge/Donate-Support%20Us-green?style=for-the-badge)](http://donate.raivali.org)
 
 **از حمایت شما متشکریم!** 💖
 

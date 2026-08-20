@@ -38,9 +38,9 @@ import {
   stripEmptyStreamSettingsFromRecord,
   stripSparseOutboundEnvelope,
 } from '@/features/core-editor/kit/outbound-editor-json'
-import { createDefaultOutbound, generateXrayOutboundFromUri, getOutboundFieldVisibility, getOutboundFormCapabilities } from '@pasarguard/xray-config-kit'
-import type { JsonObject, JsonValue, Outbound, Profile } from '@pasarguard/xray-config-kit'
-import type { XrayGeneratedFormField } from '@pasarguard/xray-config-kit'
+import { createDefaultOutbound, generateXrayOutboundFromUri, getOutboundFieldVisibility, getOutboundFormCapabilities } from '@raivali/xray-config-kit'
+import type { JsonObject, JsonValue, Outbound, Profile } from '@raivali/xray-config-kit'
+import type { XrayGeneratedFormField } from '@raivali/xray-config-kit'
 import type { ColumnDef } from '@tanstack/react-table'
 import { arrayMove } from '@dnd-kit/sortable'
 import type { ReactElement, ReactNode } from 'react'

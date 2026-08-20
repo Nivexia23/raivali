@@ -1043,7 +1043,7 @@ def test_user_sub_update_user_agent(access_token):
     )
     try:
         url = user["subscription_url"]
-        user_agent = "v2rayNG/1.9.46 This is PasarGuard Test"
+        user_agent = "v2rayNG/1.9.46 This is Raivali Test"
         ip = "203.0.113.10"
         client.get(url, headers={"User-Agent": user_agent, "X-Forwarded-For": ip})
         response = client.get(
@@ -1108,7 +1108,7 @@ def test_user_subscription_applies_rule_response_headers(access_token):
         **original_subscription,
         "rules": [
             {
-                "pattern": r"^PasarGuardRuleHeaderClient$",
+                "pattern": r"^RaivaliRuleHeaderClient$",
                 "target": "links",
                 "response_headers": {
                     "x-subheader": "Hello {USERNAME}",
@@ -1138,7 +1138,7 @@ def test_user_subscription_applies_rule_response_headers(access_token):
     try:
         response = client.get(
             user["subscription_url"],
-            headers={"User-Agent": "PasarGuardRuleHeaderClient"},
+            headers={"User-Agent": "RaivaliRuleHeaderClient"},
         )
         assert response.status_code == status.HTTP_200_OK
         assert response.text
@@ -1724,12 +1724,12 @@ def test_format_announce_supports_dynamic_variables():
 
 def test_detect_client_rule_matches_user_agent():
     rule = SubRule(
-        pattern=r"^PasarGuardRuleHeaderClient$",
+        pattern=r"^RaivaliRuleHeaderClient$",
         target=ConfigFormat.links,
         response_headers={"x-subheader": "Hello {USERNAME}"},
     )
 
-    matched_rule = SubscriptionOperation.detect_client_rule("PasarGuardRuleHeaderClient", [rule])
+    matched_rule = SubscriptionOperation.detect_client_rule("RaivaliRuleHeaderClient", [rule])
 
     assert matched_rule is not None
     assert matched_rule.target == ConfigFormat.links

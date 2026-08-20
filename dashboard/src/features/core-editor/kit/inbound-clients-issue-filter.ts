@@ -1,5 +1,5 @@
-import type { CoreKitValidationIssue } from '@pasarguard/core-kit'
-import type { Issue } from '@pasarguard/xray-config-kit'
+import type { CoreKitValidationIssue } from '@raivali/core-kit'
+import type { Issue } from '@raivali/xray-config-kit'
 
 /** Hide only empty-client noise from default inbounds; malformed user-managed client objects should still surface. */
 export function filterXrayInboundDraftIssuesForEditor(issues: Issue[]): Issue[] {

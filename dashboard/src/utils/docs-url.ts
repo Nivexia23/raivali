@@ -3,8 +3,8 @@ import i18n from '@/locales/i18n'
 
 /**
  * Generates a documentation URL for a given page path
- * Format: docs.pasarguard.org/{locale}/panel/{page}
- * Special case: /nodes routes use docs.pasarguard.org/{locale}/node/
+ * Format: docs.raivali.org/{locale}/panel/{page}
+ * Special case: /nodes routes use docs.raivali.org/{locale}/node/
  *
  * @param pagePath - The page path (e.g., '/settings', '/users', '/nodes/cores')
  * @returns The full documentation URL

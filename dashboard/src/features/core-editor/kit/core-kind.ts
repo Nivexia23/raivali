@@ -1,4 +1,4 @@
-import type { CoreKind } from '@pasarguard/core-kit'
+import type { CoreKind } from '@raivali/core-kit'
 import type { CoreResponseType } from '@/service/api'
 
 export function apiCoreTypeToKind(type: CoreResponseType | undefined): CoreKind {

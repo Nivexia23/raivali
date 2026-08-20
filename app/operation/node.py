@@ -2,8 +2,8 @@ import asyncio
 from collections.abc import AsyncIterator, Callable
 
 from fastapi import HTTPException
-from PasarGuardNodeBridge import NodeAPIError, PasarGuardNode
-from PasarGuardNodeBridge.common import service_pb2 as service
+from RaivaliNodeBridge import NodeAPIError, RaivaliNode
+from RaivaliNodeBridge.common import service_pb2 as service
 from sqlalchemy.exc import IntegrityError
 
 from app import notification
@@ -235,7 +235,7 @@ class NodeOperation(BaseOperation):
             dict: {node_id, status, message, xray_version, node_version, old_status}
             None: if connection should be skipped
         """
-        pg_node: PasarGuardNode | None = await node_manager.get_node(db_node.id)
+        pg_node: RaivaliNode | None = await node_manager.get_node(db_node.id)
         if pg_node is None:
             return None
         if core is None:

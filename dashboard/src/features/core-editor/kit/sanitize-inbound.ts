@@ -1,4 +1,4 @@
-import type { Inbound, Profile } from '@pasarguard/xray-config-kit'
+import type { Inbound, Profile } from '@raivali/xray-config-kit'
 
 /** Loopback values often come from Xray samples, browser autofill, or legacy defaults — not a meaningful rewrite target in the editor. */
 export function isPlaceholderTunnelRewriteAddress(v: unknown): boolean {

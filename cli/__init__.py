@@ -1,7 +1,7 @@
 """
-PasarGuard CLI Package
+Raivali CLI Package
 
-A modern, type-safe CLI built with Typer for managing PasarGuard instances.
+A modern, type-safe CLI built with Typer for managing Raivali instances.
 """
 
 from pydantic import ValidationError

@@ -1,13 +1,13 @@
 <p align="center">
-  <a href="https://github.com/PasarGuard/panel" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/Raivali/panel" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/PasarGuard-white-logo.png">
-      <img width="160" height="160" src="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/PasarGuard-black-logo.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/Raivali-white-logo.png">
+      <img width="160" height="160" src="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/Raivali-black-logo.png">
     </picture>
   </a>
 </p>
 
-<h1 align="center">🛡️ PasarGuard</h1>
+<h1 align="center">🛡️ Raivali</h1>
 
 <p align="center">
     <strong>统一且抗审查的代理管理解决方案</strong>
@@ -18,13 +18,13 @@
 <br/>
 <p align="center">
     <a href="#">
-        <img src="https://img.shields.io/github/actions/workflow/status/PasarGuard/panel/build.yml?style=flat-square" />
+        <img src="https://img.shields.io/github/actions/workflow/status/Raivali/panel/build.yml?style=flat-square" />
     </a>
-    <a href="https://hub.docker.com/r/PasarGuard/panel" target="_blank">
-        <img src="https://img.shields.io/docker/pulls/PasarGuard/panel?style=flat-square&logo=docker" />
+    <a href="https://hub.docker.com/r/Raivali/panel" target="_blank">
+        <img src="https://img.shields.io/docker/pulls/Raivali/panel?style=flat-square&logo=docker" />
     </a>
     <a href="#">
-        <img src="https://img.shields.io/github/license/PasarGuard/panel?style=flat-square" />
+        <img src="https://img.shields.io/github/license/Raivali/panel?style=flat-square" />
     </a>
     <a href="https://t.me/Pasar_Guard" target="_blank">
         <img src="https://img.shields.io/badge/telegram-group-blue?style=flat-square&logo=telegram" />
@@ -33,7 +33,7 @@
         <img src="https://img.shields.io/badge/twitter-commiunity-blue?style=flat-square&logo=twitter" />
     </a>
     <a href="#">
-        <img src="https://img.shields.io/github/stars/PasarGuard/panel?style=social" />
+        <img src="https://img.shields.io/github/stars/Raivali/panel?style=social" />
     </a>
 </p>
 
@@ -56,8 +56,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PasarGuard/panel" target="_blank" rel="noopener noreferrer" >
-    <img src="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/screenshot.png" alt="PasarGuard 截图" width="600" height="auto">
+  <a href="https://github.com/Raivali/panel" target="_blank" rel="noopener noreferrer" >
+    <img src="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/screenshot.png" alt="Raivali 截图" width="600" height="auto">
   </a>
 </p>
 
@@ -66,7 +66,7 @@
 > **快速导航** - 跳转到下面的任何部分
 
 -   [📖 概述](#-概述)
-    -   [🤔 为什么要使用 PasarGuard？](#-为什么要使用-pasarguard)
+    -   [🤔 为什么要使用 Raivali？](#-为什么要使用-raivali)
         -   [✨ 功能](#-功能)
 -   [🚀 安装指南](#-安装指南)
 -   [📚 文档](#-文档)
@@ -76,17 +76,17 @@
 
 # 📖 概述
 
-> **什么是 PasarGuard？**
+> **什么是 Raivali？**
 
-PasarGuard 是一个强大的代理管理工具，为处理数百个代理账户提供直观高效的界面。使用 Python 和 React.js 构建，它结合了性能、可扩展性和易用性，简化大规模代理管理。它同时支持 [Xray-core](https://github.com/XTLS/Xray-core) 与 [WireGuard](https://www.wireguard.com/)，以实现最大性能。
+Raivali 是一个强大的代理管理工具，为处理数百个代理账户提供直观高效的界面。使用 Python 和 React.js 构建，它结合了性能、可扩展性和易用性，简化大规模代理管理。它同时支持 [Xray-core](https://github.com/XTLS/Xray-core) 与 [WireGuard](https://www.wireguard.com/)，以实现最大性能。
 
 ---
 
-## 🤔 为什么要使用 PasarGuard？
+## 🤔 为什么要使用 Raivali？
 
 > **简单、强大、可靠**
 
-PasarGuard 是一个用户友好、功能丰富且可靠的代理管理工具。它允许您为用户创建和管理多个代理，无需复杂配置。通过其内置的 Web 界面，您可以轻松监控活动、修改设置和控制用户访问限制——所有这些都来自一个便捷的仪表板。
+Raivali 是一个用户友好、功能丰富且可靠的代理管理工具。它允许您为用户创建和管理多个代理，无需复杂配置。通过其内置的 Web 界面，您可以轻松监控活动、修改设置和控制用户访问限制——所有这些都来自一个便捷的仪表板。
 
 ---
 
@@ -129,7 +129,7 @@ PasarGuard 是一个用户友好、功能丰富且可靠的代理管理工具。
 
 # 🚀 安装指南
 
-> **快速开始** - 在几分钟内运行 PasarGuard
+> **快速开始** - 在几分钟内运行 Raivali
 
 ### 要快速设置，请根据您首选的数据库使用以下命令。
 
@@ -137,27 +137,27 @@ PasarGuard 是一个用户友好、功能丰富且可靠的代理管理工具。
 
 **TimescaleDB（推荐）：**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database timescaledb
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database timescaledb
 ```
 
 **SQLite：**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install
 ```
 
 **MySQL：**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database mysql
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database mysql
 ```
 
 **MariaDB：**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database mariadb
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database mariadb
 ```
 
 **PostgreSQL：**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database postgresql
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database postgresql
 ```
 
 ### 📋 安装后：
@@ -166,14 +166,14 @@ sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarg
 
 **📋 查看日志**（按 `Ctrl+C` 停止）
 
-**📁 文件位于** `/opt/pasarguard`
+**📁 文件位于** `/opt/raivali`
 
-**⚙️ 配置文件：** `/opt/pasarguard/.env`（有关详细信息，请参阅[配置](#-配置)）
+**⚙️ 配置文件：** `/opt/raivali/.env`（有关详细信息，请参阅[配置](#-配置)）
 
-**💾 数据文件：** `/var/lib/pasarguard`
+**💾 数据文件：** `/var/lib/raivali`
 
 **🔒 重要：** 仪表板需要 SSL 证书以确保安全
-- 获取 SSL 证书：[指南](https://PasarGuard.github.io/PasarGuard/zh-cn/examples/issue-ssl-certificate)
+- 获取 SSL 证书：[指南](https://Raivali.github.io/Raivali/zh-cn/examples/issue-ssl-certificate)
 - 访问：`https://YOUR_DOMAIN:8000/dashboard/`
 
 **🔗 无域名测试：** 使用 SSH 端口转发（见下文）
@@ -194,12 +194,12 @@ ssh -L 8000:localhost:8000 user@serverip
 
 ```bash
 # 生成用于设置 owner 账户的一次性临时密钥
-pasarguard cli generate-temp-key
+raivali cli generate-temp-key
 
 # 在仪表板登录页使用该密钥创建 owner 账户
 
 # 获取帮助
-pasarguard --help
+raivali --help
 ```
 
 ---
@@ -210,15 +210,15 @@ pasarguard --help
 
 **📖 官方文档** - 完整指南可在以下位置获得：
 
-🇺🇸 **[English](https://PasarGuard.github.io/PasarGuard)**
+🇺🇸 **[English](https://Raivali.github.io/Raivali)**
 
-🇮🇷 **[فارسی](https://PasarGuard.github.io/PasarGuard)**
+🇮🇷 **[فارسی](https://Raivali.github.io/Raivali)**
 
-🇷🇺 **[Русский](https://PasarGuard.github.io/PasarGuard)**
+🇷🇺 **[Русский](https://Raivali.github.io/Raivali)**
 
 </div>
 
-> **贡献：** 在 [GitHub](https://github.com/PasarGuard/PasarGuard.github.io) 上帮助改进文档
+> **贡献：** 在 [GitHub](https://github.com/Raivali/Raivali.github.io) 上帮助改进文档
 
 ---
 
@@ -226,11 +226,11 @@ pasarguard --help
 
 <div align="left">
 
-> **支持 PasarGuard 开发**
+> **支持 Raivali 开发**
 
-如果 PasarGuard 对您有帮助，请考虑支持其开发：
+如果 Raivali 对您有帮助，请考虑支持其开发：
 
-[![Donate](https://img.shields.io/badge/Donate-Support%20Us-green?style=for-the-badge)](http://donate.pasarguard.org)
+[![Donate](https://img.shields.io/badge/Donate-Support%20Us-green?style=for-the-badge)](http://donate.raivali.org)
 
 **感谢您的支持！** 💖
 

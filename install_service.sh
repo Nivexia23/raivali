@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SERVICE_NAME="pasarguard"
-SERVICE_DESCRIPTION="PasarGuard Service"
-SERVICE_DOCUMENTATION="https://github.com/pasarguard/panel"
+SERVICE_NAME="raivali"
+SERVICE_DESCRIPTION="Raivali Service"
+SERVICE_DOCUMENTATION="https://github.com/raivali/panel"
 MAIN_PY_PATH="$PWD/main.py"
 SERVICE_FILE="/etc/systemd/system/$SERVICE_NAME.service"
 

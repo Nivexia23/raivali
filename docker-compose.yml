@@ -1,8 +1,8 @@
 services:
-  pasarguard:
-    image: pasarguard/panel:latest
+  raivali:
+    image: raivali/panel:latest
     restart: always
     env_file: .env
     network_mode: host
     volumes:
-      - /var/lib/pasarguard:/var/lib/pasarguard
+      - /var/lib/raivali:/var/lib/raivali

@@ -1,13 +1,13 @@
-# Contribute to PasarGuard
+# Contribute to Raivali
 
-Thanks for considering contributing to **PasarGuard**!
+Thanks for considering contributing to **Raivali**!
 
 ## 🙋 Questions
 
 Please **don’t use GitHub Issues** to ask questions. Instead, use one of the following platforms:
 
 -   💬 Telegram: [@Pasar_Guard](https://t.me/pasar_guard)
--   🗣️ GitHub Discussions: [PasarGuard Discussions](https://github.com/pasarguard/panel/discussions)
+-   🗣️ GitHub Discussions: [Raivali Discussions](https://github.com/raivali/panel/discussions)
 
 ## 🐞 Reporting Issues
 
@@ -16,7 +16,7 @@ When reporting a bug or issue, please include:
 -   ✅ What you expected to happen
 -   ❌ What actually happened (include server logs or browser errors)
 -   ⚙️ Your `xray` JSON config and `.env` settings (censor sensitive info)
--   🔢 Your PasarGuard version and Docker version (if applicable)
+-   🔢 Your Raivali version and Docker version (if applicable)
 
 ---
 
@@ -160,11 +160,11 @@ make fformat
 
 ---
 
-## 🛠️ PasarGuard CLI
+## 🛠️ Raivali CLI
 
-PasarGuard’s CLI is built using [Typer](https://typer.tiangolo.com/).
+Raivali’s CLI is built using [Typer](https://typer.tiangolo.com/).
 
--   CLI codebase: [cli/](file:///home/coder/panel/cli) and the entrypoint script [pasarguard-cli.py](file:///home/coder/panel/pasarguard-cli.py).
+-   CLI codebase: [cli/](file:///home/coder/panel/cli) and the entrypoint script [raivali-cli.py](file:///home/coder/panel/raivali-cli.py).
 -   To run the CLI in development:
     ```bash
     make run-cli

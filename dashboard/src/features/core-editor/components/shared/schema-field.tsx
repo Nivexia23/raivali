@@ -1,4 +1,4 @@
-import type { XrayGeneratedFormField } from '@pasarguard/xray-config-kit'
+import type { XrayGeneratedFormField } from '@raivali/xray-config-kit'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'

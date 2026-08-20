@@ -1,4 +1,4 @@
-import type { Outbound } from '@pasarguard/xray-config-kit'
+import type { Outbound } from '@raivali/xray-config-kit'
 import { deepPruneEmptyJsonObjects } from '@/features/core-editor/kit/xray-parity-value'
 
 /** Deep-prune empty objects; use for `streamSettings`, `mux`, `proxySettings`, etc. (avoid `{}` in JSON / profile). Preserves sockopt even if empty. */

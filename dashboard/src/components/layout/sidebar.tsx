@@ -421,11 +421,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <Link to="/" className="flex items-center gap-2">
             <img
               src={resolvedTheme === 'dark' ? window.location.pathname + 'statics/favicon/logo.png' : window.location.pathname + 'statics/favicon/logo-dark.png'}
-              alt="PasarGuard Logo"
+              alt="Raivali Logo"
               className="h-8 w-8 object-contain"
             />
             <span dir={isRTL ? 'rtl' : 'ltr'} className="text-sm font-bold">
-              {t('pasarguard')}
+              {t('raivali')}
             </span>
           </Link>
           <SidebarTriggerWithBadge showUpdateBadge={canReadSystem && hasUpdate} />
@@ -456,7 +456,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <a href={REPO_URL} target="_blank">
                       <img
                         src={resolvedTheme === 'dark' ? window.location.pathname + 'statics/favicon/logo.png' : window.location.pathname + 'statics/favicon/logo-dark.png'}
-                        alt="PasarGuard Logo"
+                        alt="Raivali Logo"
                         className="h-6 w-6 flex-shrink-0 object-contain"
                       />
                       {canReadSystem && hasUpdate && (
@@ -495,11 +495,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <a href={REPO_URL} target="_blank" className="flex min-w-0 flex-1 items-center gap-2">
                       <img
                         src={resolvedTheme === 'dark' ? window.location.pathname + 'statics/favicon/logo.png' : window.location.pathname + 'statics/favicon/logo-dark.png'}
-                        alt="PasarGuard Logo"
+                        alt="Raivali Logo"
                         className="h-8 w-8 flex-shrink-0 object-contain"
                       />
                       <div className="flex min-w-0 flex-1 flex-col items-start overflow-hidden">
-                        <span className={cn(isRTL ? 'text-right' : 'text-left', 'truncate text-sm leading-tight font-semibold')}>{t('pasarguard')}</span>
+                        <span className={cn(isRTL ? 'text-right' : 'text-left', 'truncate text-sm leading-tight font-semibold')}>{t('raivali')}</span>
                         {canReadSystem && (
                           <div className="flex min-w-0 flex-wrap items-center gap-0.75 leading-none">
                             <span className="max-w-full truncate text-xs leading-none opacity-45">{displayVersion}</span>
@@ -544,11 +544,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <a href={REPO_URL} target="_blank">
                     <img
                       src={resolvedTheme === 'dark' ? window.location.pathname + 'statics/favicon/logo.png' : window.location.pathname + 'statics/favicon/logo-dark.png'}
-                      alt="PasarGuard Logo"
+                      alt="Raivali Logo"
                       className="h-8 w-8 flex-shrink-0 object-contain"
                     />
                     <div className="flex min-w-0 flex-col overflow-hidden">
-                      <span className={cn(isRTL ? 'text-right' : 'text-left', 'truncate text-sm leading-tight font-semibold')}>{t('pasarguard')}</span>
+                      <span className={cn(isRTL ? 'text-right' : 'text-left', 'truncate text-sm leading-tight font-semibold')}>{t('raivali')}</span>
                       {canReadSystem && (
                         <div className="flex min-w-0 flex-wrap items-center gap-0.75 leading-none">
                           <span className="max-w-full truncate text-xs leading-none opacity-45">{displayVersion}</span>

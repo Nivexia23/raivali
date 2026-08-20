@@ -79,15 +79,15 @@ run-migration:
 check-migrations:
 	@uv run alembic check
 
-# run PasarGuard
+# run Raivali
 .PHONY: run
 run:
 	@uv run main.py
 
-# run pasarguard-cli
+# run raivali-cli
 .PHONY: run-cli
 run-cli:
-	@uv run pasarguard-cli.py
+	@uv run raivali-cli.py
 
 # Run tests
 .PHONY: test
@@ -99,7 +99,7 @@ test:
 test-whatch:
 	@uv run ptw
 
-# Run PasarGuard with watchfiles
+# Run Raivali with watchfiles
 .PHONY: run-watch
 run-watch:
 	@echo "Running application with watchfiles..."

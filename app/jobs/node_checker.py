@@ -1,6 +1,6 @@
 import asyncio
 
-from PasarGuardNodeBridge import Health, NodeAPIError, PasarGuardNode
+from RaivaliNodeBridge import Health, NodeAPIError, RaivaliNode
 
 from app import notification, on_shutdown, on_startup, scheduler
 from app.db import GetDB
@@ -35,7 +35,7 @@ def should_reconnect_after_health_error(error_code: int | None, error_message: s
     return error_code > -1
 
 
-async def verify_node_backend_health(node: PasarGuardNode, node_name: str) -> tuple[Health, int | None, str | None]:
+async def verify_node_backend_health(node: RaivaliNode, node_name: str) -> tuple[Health, int | None, str | None]:
     """
     Verify node health by checking backend stats.
     Returns (health, error_code, error_message) - error_code and error_message are None if no error occurred.
@@ -76,7 +76,7 @@ async def verify_node_backend_health(node: PasarGuardNode, node_name: str) -> tu
             return current_health, None, error_message
 
 
-async def process_node_health_check(db_node: Node, node: PasarGuardNode):
+async def process_node_health_check(db_node: Node, node: RaivaliNode):
     """
     Process health check for a single node:
     1. Check if node requires hard reset
@@ -264,7 +264,7 @@ async def shutdown_nodes():
 
     logger.info("Stopping nodes' cores...")
 
-    nodes: dict[int, PasarGuardNode] = await node_manager.get_nodes()
+    nodes: dict[int, RaivaliNode] = await node_manager.get_nodes()
 
     stop_tasks = [node.stop() for node in nodes.values()]
 

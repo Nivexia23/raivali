@@ -1,4 +1,4 @@
-import type { Inbound, InboundFormCapabilities, Transport } from '@pasarguard/xray-config-kit'
+import type { Inbound, InboundFormCapabilities, Transport } from '@raivali/xray-config-kit'
 
 /**
  * Stream types that xray-config-kit `createDefaultInbound` can build via its internal

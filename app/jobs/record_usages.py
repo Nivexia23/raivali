@@ -7,8 +7,8 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import UTC, datetime as dt, timedelta as td
 from operator import attrgetter
 
-from PasarGuardNodeBridge import NodeAPIError, PasarGuardNode
-from PasarGuardNodeBridge.common.service_pb2 import StatType
+from RaivaliNodeBridge import NodeAPIError, RaivaliNode
+from RaivaliNodeBridge.common.service_pb2 import StatType
 from sqlalchemy import BigInteger, DateTime, and_, bindparam, func, insert, select, union_all, update
 from sqlalchemy.dialects.mysql import insert as mysql_insert
 from sqlalchemy.dialects.postgresql import ARRAY, insert as pg_insert
@@ -512,7 +512,7 @@ def _process_users_stats_response(stats_response):
     return validated_params, invalid_uids
 
 
-async def get_users_stats(node: PasarGuardNode):
+async def get_users_stats(node: RaivaliNode):
     """
     Get user stats from node using thread pool for CPU-bound processing.
     This distributes the heavy data processing workload across cores.
@@ -554,7 +554,7 @@ def _process_outbounds_stats_response(stats_response):
     return params
 
 
-async def get_outbounds_stats(node: PasarGuardNode):
+async def get_outbounds_stats(node: RaivaliNode):
     """
     Get outbounds stats from node using thread pool for CPU-bound processing.
     This distributes the heavy data processing workload across cores.
@@ -676,7 +676,7 @@ async def _record_user_usages_impl():
     Separated to allow timeout wrapper.
     """
     job_start_time = time.time()
-    nodes: tuple[int, PasarGuardNode] = await node_manager.get_healthy_nodes()
+    nodes: tuple[int, RaivaliNode] = await node_manager.get_healthy_nodes()
 
     if not nodes:
         logger.debug("No healthy nodes found, skipping user usage recording")

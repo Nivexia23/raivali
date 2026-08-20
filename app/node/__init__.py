@@ -1,8 +1,8 @@
 import asyncio
 
 from aiorwlock import RWLock
-from PasarGuardNodeBridge import Health, NodeType, PasarGuardNode, create_node
-from PasarGuardNodeBridge.common.service_pb2 import User as ProtoUser
+from RaivaliNodeBridge import Health, NodeType, RaivaliNode, create_node
+from RaivaliNodeBridge.common.service_pb2 import User as ProtoUser
 
 from app.db.models import Node, NodeConnectionType
 from app.node.user import core_users
@@ -17,12 +17,12 @@ type_map = {
 
 class NodeManager:
     def __init__(self):
-        self._nodes: dict[int, PasarGuardNode] = {}
+        self._nodes: dict[int, RaivaliNode] = {}
         self._user_sync_locks: dict[int, asyncio.Lock] = {}
         self._lock = RWLock(fast=True)
         self.logger = get_logger("node-manager")
 
-    async def _shutdown_node(self, node: PasarGuardNode | None):
+    async def _shutdown_node(self, node: RaivaliNode | None):
         if node is None:
             return
 
@@ -32,9 +32,9 @@ class NodeManager:
         except Exception:
             pass
 
-    async def update_node(self, node: Node) -> PasarGuardNode:
+    async def update_node(self, node: Node) -> RaivaliNode:
         async with self._lock.writer_lock:
-            old_node: PasarGuardNode | None = self._nodes.pop(node.id, None)
+            old_node: RaivaliNode | None = self._nodes.pop(node.id, None)
 
             new_node = create_node(
                 connection=type_map[node.connection_type],
@@ -61,46 +61,46 @@ class NodeManager:
 
     async def remove_node(self, id: int) -> None:
         async with self._lock.writer_lock:
-            old_node: PasarGuardNode | None = self._nodes.pop(id, None)
+            old_node: RaivaliNode | None = self._nodes.pop(id, None)
             self._user_sync_locks.pop(id, None)
 
         # Do cleanup without holding the lock to avoid slow delete operations.
         asyncio.create_task(self._shutdown_node(old_node))
 
-    async def get_node(self, id: int) -> PasarGuardNode | None:
+    async def get_node(self, id: int) -> RaivaliNode | None:
         async with self._lock.reader_lock:
             return self._nodes.get(id, None)
 
-    async def get_nodes(self) -> dict[int, PasarGuardNode]:
+    async def get_nodes(self) -> dict[int, RaivaliNode]:
         async with self._lock.reader_lock:
             return self._nodes
 
-    async def get_healthy_nodes(self) -> list[tuple[int, PasarGuardNode]]:
+    async def get_healthy_nodes(self) -> list[tuple[int, RaivaliNode]]:
         async with self._lock.reader_lock:
-            nodes: list[tuple[int, PasarGuardNode]] = [
+            nodes: list[tuple[int, RaivaliNode]] = [
                 (id, node) for id, node in self._nodes.items() if (await node.get_health() == Health.HEALTHY)
             ]
             return nodes
 
-    async def get_broken_nodes(self) -> list[tuple[int, PasarGuardNode]]:
+    async def get_broken_nodes(self) -> list[tuple[int, RaivaliNode]]:
         async with self._lock.reader_lock:
-            nodes: list[tuple[int, PasarGuardNode]] = [
+            nodes: list[tuple[int, RaivaliNode]] = [
                 (id, node) for id, node in self._nodes.items() if (await node.get_health() == Health.BROKEN)
             ]
             return nodes
 
-    async def get_not_connected_nodes(self) -> list[tuple[int, PasarGuardNode]]:
+    async def get_not_connected_nodes(self) -> list[tuple[int, RaivaliNode]]:
         async with self._lock.reader_lock:
-            nodes: list[tuple[int, PasarGuardNode]] = [
+            nodes: list[tuple[int, RaivaliNode]] = [
                 (id, node) for id, node in self._nodes.items() if (await node.get_health() == Health.NOT_CONNECTED)
             ]
             return nodes
 
-    async def _snapshot_nodes(self) -> list[PasarGuardNode]:
+    async def _snapshot_nodes(self) -> list[RaivaliNode]:
         async with self._lock.reader_lock:
             return list(self._nodes.values())
 
-    async def _snapshot_node_items(self) -> list[tuple[int, PasarGuardNode]]:
+    async def _snapshot_node_items(self) -> list[tuple[int, RaivaliNode]]:
         async with self._lock.reader_lock:
             return list(self._nodes.items())
 
@@ -108,7 +108,7 @@ class NodeManager:
     def _chunk_users(users: list[ProtoUser], size: int) -> list[list[ProtoUser]]:
         return [users[start : start + size] for start in range(0, len(users), size)]
 
-    async def _sync_user_batch_to_node(self, node: PasarGuardNode, batch: list[ProtoUser]) -> int:
+    async def _sync_user_batch_to_node(self, node: RaivaliNode, batch: list[ProtoUser]) -> int:
         users_to_sync = batch
         supports_chunked = True
         supports_chunked_check = getattr(node, "_supports_chunked_sync", None)
@@ -130,7 +130,7 @@ class NodeManager:
 
         return len(users_to_sync)
 
-    async def _sync_users_to_node(self, node_id: int, node: PasarGuardNode, users: list[ProtoUser]):
+    async def _sync_users_to_node(self, node_id: int, node: RaivaliNode, users: list[ProtoUser]):
         batch_size = max(1, nats_settings.node_update_users_batch_size)
         lock = self._user_sync_locks.setdefault(node_id, asyncio.Lock())
         failed_count = 0

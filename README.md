@@ -1,13 +1,13 @@
 <p align="center">
-  <a href="https://github.com/PasarGuard/panel" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/Raivali/panel" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/PasarGuard-white-logo.png">
-      <img width="160" height="160" src="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/PasarGuard-black-logo.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/Raivali-white-logo.png">
+      <img width="160" height="160" src="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/Raivali-black-logo.png">
     </picture>
   </a>
 </p>
 
-<h1 align="center">🛡️ PasarGuard</h1>
+<h1 align="center">🛡️ Raivali</h1>
 
 <p align="center">
     <strong>Unified & Censorship-Resistant Proxy Management Solution</strong>
@@ -17,20 +17,20 @@
 
 <br/>
 <p align="center">
-    <a href="https://github.com/PasarGuard/panel/actions/workflows/build.yml" target="_blank">
-        <img src="https://img.shields.io/github/actions/workflow/status/PasarGuard/panel/build.yml?style=flat-square" />
+    <a href="https://github.com/Raivali/panel/actions/workflows/build.yml" target="_blank">
+        <img src="https://img.shields.io/github/actions/workflow/status/Raivali/panel/build.yml?style=flat-square" />
     </a>
-    <a href="https://hub.docker.com/r/PasarGuard/panel" target="_blank">
-        <img src="https://img.shields.io/docker/pulls/pasarguard/panel?style=flat-square&logo=docker" />
+    <a href="https://hub.docker.com/r/Raivali/panel" target="_blank">
+        <img src="https://img.shields.io/docker/pulls/raivali/panel?style=flat-square&logo=docker" />
     </a>
-    <a href="https://github.com/PasarGuard/panel/blob/main/LICENSE" target="_blank">
-        <img src="https://img.shields.io/github/license/PasarGuard/panel?style=flat-square" />
+    <a href="https://github.com/Raivali/panel/blob/main/LICENSE" target="_blank">
+        <img src="https://img.shields.io/github/license/Raivali/panel?style=flat-square" />
     </a>
     <a href="https://t.me/Pasar_Guard" target="_blank">
         <img src="https://img.shields.io/badge/telegram-group-blue?style=flat-square&logo=telegram" />
     </a>
-    <a href="https://github.com/PasarGuard/panel" target="_blank">
-        <img src="https://img.shields.io/github/stars/PasarGuard/panel?style=social" />
+    <a href="https://github.com/Raivali/panel" target="_blank">
+        <img src="https://img.shields.io/github/stars/Raivali/panel?style=social" />
     </a>
 </p>
 
@@ -49,8 +49,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PasarGuard/panel" target="_blank" rel="noopener noreferrer" >
-    <img src="https://github.com/PasarGuard/PasarGuard.github.io/raw/main/public/logos/screenshot.png" alt="PasarGuard screenshots" width="600" height="auto">
+  <a href="https://github.com/Raivali/panel" target="_blank" rel="noopener noreferrer" >
+    <img src="https://github.com/Raivali/Raivali.github.io/raw/main/public/logos/screenshot.png" alt="Raivali screenshots" width="600" height="auto">
   </a>
 </p>
 
@@ -59,7 +59,7 @@
 > **Quick Navigation** - Jump to any section below
 
 -   [📖 Overview](#-overview)
-    -   [🤔 Why using PasarGuard?](#-why-using-pasarguard)
+    -   [🤔 Why using Raivali?](#-why-using-raivali)
         -   [✨ Features](#-features)
 -   [🚀 Installation guide](#-installation-guide)
 -   [📚 Documentation](#-documentation)
@@ -69,17 +69,17 @@
 
 # 📖 Overview
 
-> **What is PasarGuard?**
+> **What is Raivali?**
 
-PasarGuard is a powerful proxy management tool that offers an intuitive and efficient interface for handling hundreds of proxy accounts. Built with Python and React.js it combines performance, scalability, and ease of use to simplify large-scale proxy management. It supports both [Xray-core](https://github.com/XTLS/Xray-core) and [WireGuard](https://www.wireguard.com/) for maximum performance.
+Raivali is a powerful proxy management tool that offers an intuitive and efficient interface for handling hundreds of proxy accounts. Built with Python and React.js it combines performance, scalability, and ease of use to simplify large-scale proxy management. It supports both [Xray-core](https://github.com/XTLS/Xray-core) and [WireGuard](https://www.wireguard.com/) for maximum performance.
 
 ---
 
-## 🤔 Why using PasarGuard?
+## 🤔 Why using Raivali?
 
 > **Simple, Powerful, Reliable**
 
-PasarGuard is a user-friendly, feature-rich, and reliable proxy management tool. It allows you to create and manage multiple proxies for your users without the need for complex configuration. With its built-in web interface, you can easily monitor activity, modify settings, and control user access limits — all from one convenient dashboard.
+Raivali is a user-friendly, feature-rich, and reliable proxy management tool. It allows you to create and manage multiple proxies for your users without the need for complex configuration. With its built-in web interface, you can easily monitor activity, modify settings, and control user access limits — all from one convenient dashboard.
 
 ---
 
@@ -122,7 +122,7 @@ PasarGuard is a user-friendly, feature-rich, and reliable proxy management tool.
 
 # 🚀 Installation guide
 
-> **Quick Start** - Get PasarGuard running in minutes
+> **Quick Start** - Get Raivali running in minutes
 
 ### For a quick setup, use the following commands based on your preferred database.
 
@@ -130,27 +130,27 @@ PasarGuard is a user-friendly, feature-rich, and reliable proxy management tool.
 
 **TimescaleDB (Recommended):**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database timescaledb
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database timescaledb
 ```
 
 **SQLite:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install
 ```
 
 **MySQL:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database mysql
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database mysql
 ```
 
 **MariaDB:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database mariadb
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database mariadb
 ```
 
 **PostgreSQL:**
 ```bash
-sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarguard.sh)" @ install --database postgresql
+sudo bash -c "$(curl -fsSL https://github.com/Raivali/scripts/raw/main/raivali.sh)" @ install --database postgresql
 ```
 
 ### 📋 After installation:
@@ -159,14 +159,14 @@ sudo bash -c "$(curl -fsSL https://github.com/PasarGuard/scripts/raw/main/pasarg
 
 **📋 Watch the logs** (press `Ctrl+C` to stop)
 
-**📁 Files are located at** `/opt/pasarguard`
+**📁 Files are located at** `/opt/raivali`
 
-**⚙️ Config file:** `/opt/pasarguard/.env` (see [Configuration](#-configuration) for details)
+**⚙️ Config file:** `/opt/raivali/.env` (see [Configuration](#-configuration) for details)
 
-**💾 Data files:** `/var/lib/pasarguard`
+**💾 Data files:** `/var/lib/raivali`
 
 **🔒 Important:** Dashboard requires SSL certificate for security
-- Get SSL certificate: [Guide](https://docs.pasarguard.org/en/examples/issue-ssl-certificate)
+- Get SSL certificate: [Guide](https://docs.raivali.org/en/examples/issue-ssl-certificate)
 - Access: `https://YOUR_DOMAIN:8000/dashboard/`
 
 **🔗 For testing without domain:** Use SSH port forwarding (see below)
@@ -187,12 +187,12 @@ Then access: `http://localhost:8000/dashboard/`
 
 ```bash
 # Generate a one-time setup key for owner account setup
-pasarguard cli generate-temp-key
+raivali cli generate-temp-key
 
 # Use the key on the dashboard login page to create the owner account
 
 # Get help
-pasarguard --help
+raivali --help
 ```
 
 
@@ -203,17 +203,17 @@ pasarguard --help
 
 **📖 Official Documentation** - Complete guides available in:
 
-🇺🇸 **[English](https://docs.pasarguard.org/en)**
+🇺🇸 **[English](https://docs.raivali.org/en)**
 
-🇮🇷 **[فارسی](https://docs.pasarguard.org/fa)**
+🇮🇷 **[فارسی](https://docs.raivali.org/fa)**
 
-🇷🇺 **[Русский](https://docs.pasarguard.org/ru)**
+🇷🇺 **[Русский](https://docs.raivali.org/ru)**
 
-🇨🇳 **[简体中文](https://docs.pasarguard.org/zh-cn)**
+🇨🇳 **[简体中文](https://docs.raivali.org/zh-cn)**
 
 </div>
 
-> **Contributing:** Help improve documentation on [GitHub](https://github.com/PasarGuard/PasarGuard.github.io)
+> **Contributing:** Help improve documentation on [GitHub](https://github.com/Raivali/Raivali.github.io)
 
 ---
 
@@ -221,11 +221,11 @@ pasarguard --help
 
 <div align="left">
 
-> **Support PasarGuard Development**
+> **Support Raivali Development**
 
-If PasarGuard helps you, consider supporting its development:
+If Raivali helps you, consider supporting its development:
 
-[![Donate](https://img.shields.io/badge/Donate-Support%20Us-green?style=for-the-badge)](https://donate.pasarguard.org)
+[![Donate](https://img.shields.io/badge/Donate-Support%20Us-green?style=for-the-badge)](https://donate.raivali.org)
 
 **Thank you for your support!** 💖
 

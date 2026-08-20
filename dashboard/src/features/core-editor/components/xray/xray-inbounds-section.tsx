@@ -57,8 +57,8 @@ import { mldsa65PairMatches, validateMldsa65Seed, validateMldsa65Verify } from '
 import { generateWireGuardKeyPair, getWireGuardPublicKey } from '@/utils/wireguard'
 import { arrayMove } from '@dnd-kit/sortable'
 import { zodResolver } from '@hookform/resolvers/zod'
-import type { Fallback, Inbound, InboundPort, Profile, Security, ShadowsocksMethod, Transport, XrayGeneratedFormField } from '@pasarguard/xray-config-kit'
-import { createDefaultInbound, createDefaultInboundForProtocol, getInboundFieldVisibility, getInboundFormCapabilities } from '@pasarguard/xray-config-kit'
+import type { Fallback, Inbound, InboundPort, Profile, Security, ShadowsocksMethod, Transport, XrayGeneratedFormField } from '@raivali/xray-config-kit'
+import { createDefaultInbound, createDefaultInboundForProtocol, getInboundFieldVisibility, getInboundFormCapabilities } from '@raivali/xray-config-kit'
 import type { ColumnDef } from '@tanstack/react-table'
 import type { TFunction } from 'i18next'
 import { Cable, Copy, Dices, KeyRound, Pencil, Plus, RefreshCcw, Shield, Trash2 } from 'lucide-react'
@@ -341,7 +341,7 @@ interface TlsCertificateUiItem {
   certificate: string
   key: string
   ocspStapling: string
-  /** PasarGuard / Xray: cert material stays on the node; control plane skips loading for SNI. */
+  /** Raivali / Xray: cert material stays on the node; control plane skips loading for SNI. */
   serveOnNode: boolean
 }
 
